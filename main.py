@@ -4,6 +4,11 @@ from agent import create_asor
 
 app = FastAPI()
 
+@app.get("/")
+def home():
+    return {"message": "API is working"} 
+
+
 class ASORRequest(BaseModel):
     employee_id: str
     request_type: str
